@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --open",
+    "postinstall": "ivy-ngcc",
+    "start": "ng serve --aot --open",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",

@@ -2,6 +2,31 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.0-beta.7.
 
+## Starting a new project with Ivy
+
+Add `--enable-ivy` flag to start a new project with Ivy.
+
+```sh
+ng new my-app --enable-ivy
+```
+
+Modify `src/tsconfig.app.json` for a workaround to use the previous version of Angular's style of Lazy-loading.
+```json
+{
+  "compilerOptions": { ... },
+  "angularCompilerOptions": {
+    "enableIvy": true,
+    "allowEmptyCodegenFiles": true
+  }
+}
+```
+
+Run the app!
+
+```sh
+$ ng serve --aot --open
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
